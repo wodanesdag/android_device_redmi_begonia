@@ -103,10 +103,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl:64 \
     android.hardware.drm-service.clearkey
 
-# FM Radio
-PRODUCT_PACKAGES += \
-    RevampedFMRadio
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
@@ -416,6 +412,10 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
+
+# Remove Unwanted Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 # Inherit vendor
 $(call inherit-product, vendor/redmi/begonia/begonia-vendor.mk)
