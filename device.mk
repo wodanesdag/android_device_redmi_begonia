@@ -257,6 +257,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/MiuiCameraLeica/config.mk)
+
 # MTK In-Call volumes adjusting service
 PRODUCT_PACKAGES += \
     MtkInCallService
